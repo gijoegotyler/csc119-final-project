@@ -3,11 +3,8 @@
 # 2/9/2022
 
 # import libraries
+from __future__ import annotations
 from typing import Optional
-
-# import Player object for type hinting
-from player import Player
-
 
 # define Item Base Class
 class Item:
@@ -37,7 +34,7 @@ class Food(Item):
         self.healing = healing
 
     # set action function to heal passed player object
-    def Eat(self, player: Player):
+    def Eat(self, player: Player): # type: ignore
         if player.hp + self.healing <= player.max_hp:
             player.hp += self.healing
         else:

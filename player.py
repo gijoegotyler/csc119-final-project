@@ -3,11 +3,9 @@
 # 2/9/2022
 
 # import libraries
+from __future__ import annotations
 import math
 import sys
-
-# import Player and Items object for type hinting
-from items import Food
 
 # define player class
 class Player:
@@ -81,6 +79,6 @@ class Player:
 
     def use_item(self, item_index: int):
         # if the item is food, remove it from inv, call its eat method with self as input
-        if type(self.inventory[item_index]) == Food:
+        if type(self.inventory[item_index]) == Food: # type: ignore
             food = self.inventory.pop(item_index)
             food.Eat(self)
