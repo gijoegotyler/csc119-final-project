@@ -3,8 +3,11 @@
 # 2/9/2022
 
 # import libraries
-import sys
 import math
+import sys
+
+# import Player and Items object for type hinting
+from items import Food
 
 # define player class
 class Player:
@@ -18,11 +21,11 @@ class Player:
             "Intelligence": 1,
             "Vitality": 1,
             "Magic": None,
-            "Crafting": None
+            "Crafting": None,
         }
 
         # set base hp and max hp
-        self.max_hp = self.skills["Vitality"]*3
+        self.max_hp = self.skills["Vitality"] * 3
         self.hp = self.max_hp
 
         # generate empty inventory
@@ -31,7 +34,7 @@ class Player:
         # set base level and experience
         self.level = 1
         self.experience = 0
-    
+
     def level_up(self):
         # let user know about level and increment level
         print("You leveled up!")
@@ -48,26 +51,26 @@ class Player:
             skill = list(self.skills)[i]
             if self.skills[skill] is not None:
                 print(f"{i}) {skill}")
-        
+
         # get user input to decide which skill to improve and level it based on the user level
         selection = int(input("Which skill do you upgrade: "))
         self.skills[list(self.skills)[selection]] += self.level // 3 + 1
-        
+
         # if the skill leveled was vitality apply its health bonuses
         if list(self.skills[selection]) == "Vitality":
             prev_max_hp = self.max_hp
-            self.max_hp = self.skills["Vitality"]*3
+            self.max_hp = self.skills["Vitality"] * 3
             self.hp += self.max_hp - prev_max_hp
 
     def check_level_up(self):
         # calculate required exp for level up
-        req_exp = math.ceil(5*(math.log(self.level)**1.5)+10)
+        req_exp = math.ceil(5 * (math.log(self.level) ** 1.5) + 10)
 
         # if the exp req is met remove the req exp and call level up code
         if self.experience >= req_exp:
             self.experience -= req_exp
             self.level_up()
-    
+
     def check_hp(self):
         # ensure that if you run out of health you die and the game ends and you dont go over max hp
         if self.hp <= 0:
