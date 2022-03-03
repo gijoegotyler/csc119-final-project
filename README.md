@@ -9,12 +9,10 @@ I have made a randomly generated set of rooms connected both purposefully and ra
 - [x] Generate Extra Random Connections between rooms 
 - [x] Hint if you have been to the same room many times
 - [x] puzzle element added: secret ending
+- [x] implement battles
+- [x] implement chests
+- [x] add way to gain experience
+- [x] add inventory
+- [x] add enemy types
 
-## Todo
 
-- [ ] implement battles
-- [ ] implement chests
-- [ ] add story
-- [ ] add enemy types
-- [ ] add way to gain experience
-- [ ] add inventory
