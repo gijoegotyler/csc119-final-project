@@ -8,6 +8,7 @@ I have made a randomly generated set of rooms connected both purposefully and ra
 - [x] Generate Path 
 - [x] Generate Extra Random Connections between rooms 
 - [x] Hint if you have been to the same room many times
+- [x] puzzle element added: secret ending
 
 ## Todo
 
@@ -16,5 +17,4 @@ I have made a randomly generated set of rooms connected both purposefully and ra
 - [ ] add story
 - [ ] add enemy types
 - [ ] add way to gain experience
-- [ ] add puzzle element?
 - [ ] add inventory

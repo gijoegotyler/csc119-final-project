@@ -12,6 +12,9 @@ class Room:
     def __init__(self):
         self.neighbors = {}
         self.end = False
+        self.ladder = False
+        self.chest = []
+        self.enemies = []
 
     # create function to add a neighbor
     def add_neighbor(self, direction: str, room_index: Tuple[int, int]):

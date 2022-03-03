@@ -2,9 +2,11 @@
 # Tyler Wright
 # 2/9/2022
 
+import math
 # import libraries
-from __future__ import annotations
+import random
 from typing import Optional
+
 
 # define Item Base Class
 class Item:
@@ -25,6 +27,15 @@ class Sword(Item):
         self.power = power
         self.durability = durability
 
+    def damage_item(self):
+        damage = random.randrange(1, math.ceil(self.power / 5) + 2)
+        self.durability -= damage
+
+    def check_durabiliy(self):
+        if self.durability <= 0:
+            return "Broken"
+        return ""
+
 
 class Food(Item):
     # append init to include healing
@@ -32,10 +43,3 @@ class Food(Item):
         Item.__init__(self, name)
         self.action = "Eat"
         self.healing = healing
-
-    # set action function to heal passed player object
-    def Eat(self, player: Player): # type: ignore
-        if player.hp + self.healing <= player.max_hp:
-            player.hp += self.healing
-        else:
-            player.hp = player.max_hp
