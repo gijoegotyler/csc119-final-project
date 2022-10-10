@@ -10,7 +10,7 @@ I have made a randomly generated set of rooms connected both purposefully and ra
 - [x] Hint if you have been to the same room many times
 - [x] puzzle element added: secret ending
 - [x] implement battles
-- [x] implement chests
+- [x] implement chests and get treasure
 - [x] add way to gain experience
 - [x] add inventory
 - [x] add enemy types
