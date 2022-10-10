@@ -5,7 +5,7 @@ I have made a randomly generated set of rooms connected both purposefully and ra
 
 ## Working Features
 
-- [x] Generate Path 
+- [x] Generate Path to exit
 - [x] Generate Extra Random Connections between rooms 
 - [x] Hint if you have been to the same room many times
 - [x] puzzle element added: secret ending
